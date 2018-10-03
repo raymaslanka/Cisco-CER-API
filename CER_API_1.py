@@ -19,7 +19,9 @@ if cer_version != "10":
    print("Status:",soup.status.string)
 else:
    # need to test this somewhere
-   # I don't have access 
+   # I don't have access to pre 12 version now
+   # concept is that authentication may not have been required in the past 
+   # or at least not sha256
    resp = requests.get('http://' + ip_add + '/cerappservices/export/authenticate/status/' + username + "/" + password)
    soup = BeautifulSoup(resp.text, "xml")
    # print(soup.prettify())
